@@ -25,7 +25,7 @@ body {
 
 .jumbotron h1 {
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 1300px;
 }
 
 .jumbotron p {
@@ -114,14 +114,14 @@ body {
 
 .widget p {
   font-size: 0.9em;
-  color: black;
+  color:white;
 }
 
 .widget input {
   width: 100%;
   padding: 8px;
   margin-top: 10px;
-  border: 1px solid #9090A5;
+  border: 1px solid black;
   border-radius: 4px;
   font-family: 'Lato', sans-serif;
 }
