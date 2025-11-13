@@ -24,8 +24,9 @@ body {
 }
 
 .jumbotron h1 {
-  margin-bottom: 10px;
-  font-weight: 1300px;
+  font-size: 70px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .jumbotron p {
@@ -83,11 +84,16 @@ body {
 
 /* === Баруун талын sidebar === */
 .messages {
+  text-align: center;
   background-color: #F61067;
   color: #13124F;
   padding: 8px 12px;
   border-radius: 4px;
   margin-bottom: 15px;
+}
+
+.messages h4 {
+  justify-content: center;
 }
 
 .badge {
@@ -106,6 +112,20 @@ body {
   margin-bottom: 20px;
 }
 
+/* === Poll widget === */
+.widget.poll {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid black; /* Энгийн хар хүрээ */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.poll p {
+  color: black;
+}
+
 .widget h4 {
   margin-top: 0;
   color: #9090A5;
@@ -114,7 +134,7 @@ body {
 
 .widget p {
   font-size: 0.9em;
-  color:white;
+  color:black;
 }
 
 .widget input {
@@ -139,11 +159,12 @@ body {
 }
 
 .btn-send:hover {
-  background-color: white;
+  background-color: #352BA5;
 }
 
 .widget small a {
-  color:#352BA5;
+  text-align: center;
+  color: #352BA5;
   text-decoration: none;
   font-size: 0.8em;
 }
@@ -198,6 +219,8 @@ body {
   text-align: center;
   padding: 10px 0;
   font-weight: 700;
+  border-top: 2px solid black; /* Тод хүрээ нэмсэн */
+  border-bottom: 2px solid black;
 }
 
 /* === Footer хэсэг === */
@@ -207,9 +230,10 @@ body {
   text-align: center;
   padding: 15px 0;
   font-size: 0.9em;
+  border-top: 2px solid black; /* Энгийн хар хүрээ */
 }
 
-/* === Responsive Design (Даалгавар 3) === */
+/* === Responsive Design === */
 
 /* Таблет */
 @media (max-width: 992px) {
