@@ -1,53 +1,39 @@
-/* ======================================= */
-/* I. Ерөнхий ба Нэгтгэсэн Hero Section-ууд */
-/* ======================================= */
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #ffffff;
 }
 
-/* Бүх hero section-уудын нийтлэг тохиргоо */
 .apple-hero,
 .iphone-hero,
 .airpods-pro3-hero,
-.ipad-air-hero, /* Энэ болон доорх section-ийн фонтыг томруулсан */
+.ipad-air-hero, 
 .iwatch-hero,
 .ipad-hero,
 .macbookair-hero,
 .trade-in-hero,
 .card-hero {
-    /* Layout: Flexbox ашиглан төвлөрүүлэлтийг хийнэ */
+  
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Босоогоор голлуулна */
-    align-items: center;     /* Хөндлөнгөөр голлуулна */
+    justify-content: center;
+    align-items: center;     
     text-align: center;
-    
-    /* Өндөр ба зай */
     height: 600px;           
     padding: 0;
     width: 100%;             
     margin: 0;               
-    
-    /* Background тохиргоо */
     background-size: cover;        
     background-position: center;   
     background-repeat: no-repeat;
     background-color: #f5f5f7;
 }
-
-/* Нэг мөрийн hero section-уудад доороо зай өгөх */
 .apple-hero,
 .iphone-hero,
 .airpods-pro3-hero {
-    margin-bottom: 10px; /* Зайг 30px болгож буцаасан */
+    margin-bottom: 10px; 
 }
-
-
-/* ======================================= */
-/* II. 2-Баганат Хэсэг (Flexbox) */
-/* ======================================= */
 
 .two-up-container {
     
@@ -72,14 +58,6 @@ body {
     margin: 0;                   
     background-color: #f5f5f7;
 }
-
-
-
-/* ======================================= */
-/* III. Зураг, Текст, Товчлуурын Style (Нэгтгэсэн) */
-/* ======================================= */
-
-/* Background Зураг */
 .apple-hero { background-image: url('apple.jpg'); }
 .iphone-hero { background-image: url('logo1.jpg'); }
 .airpods-pro3-hero { background-image: url('logo2.jpg'); }
@@ -89,49 +67,33 @@ body {
 .macbookair-hero { background-image:  url('logo6.jpg');}
 .trade-in-hero { background-image:  url('logo-7.jpg');}
 .card-hero { background-image: url('logo8.jpg');}
-
-/* Текстийн wrapper-ийн margin-ийг арилгаж, Flexbox-д даатгав. */
 .unit-wrapper { 
     margin: 0;
-    margin-top: -150px;
-    padding: 40px 20px; /* Буруу төвлөрүүлж байсан margin-ийг бүрэн арилгасан */
+    margin-top: -270px;
+    padding: 40px 20px; 
     color: #1d1d1f;
 }
 .unit-wrapper1 { 
     margin: 100px;
-    margin-top: 480px; /* Буруу төвлөрүүлж байсан margin-ийг бүрэн арилгасан */
+    margin-top: 480px; 
     color: #1d1d1f;
 }
-
-
-/* 🟢 ҮНДСЭН ФОНТЫН ДҮРЭМ: БҮХ HEADLINE-д хамаарна (iPad, iWatch-ийг оруулаад) 🟢 */
 .headline {
-    /* Бүх h2/h3-ийг нэг хэмжээтэй болгож байна */
     font-size: 56px; 
     font-weight: 600;
     margin: 0;
     color: #1d1d1f;
 }
-
-/* 🟢 ҮНДСЭН ФОНТЫН ДҮРЭМ: БҮХ SUBHEAD-д хамаарна (iPad, iWatch-ийг оруулаад) 🟢 */
 .subhead {
-    /* Бүх subhead-ийг нэг хэмжээтэй болгож байна */
     font-size: 26px;
     margin: 5px 0 5px 0; 
     color: #1d1d1f;
 }
-
-/* ❌ Урьд нь 2-баганатад фонтыг жижигрүүлж байсан дүрмийг устгасан. 
-   Одоо тэд ерөнхий .headline, .subhead дүрмийг авч, 56px/26px болно. */
-
-/* iWatch-ийн текст цагаан өнгөтэй байх */
 .iwatch-hero .headline, 
 .iwatch-hero .subhead,
 .iwatch-hero .unit-wrapper {
     color: #000000;
 }
-
-/* Товчлуурууд */
 .cta-links {
     display: flex;
     gap: 15px;
@@ -148,67 +110,42 @@ body {
     font-size: 17px;
     transition: all 0.3s ease;
 }
-
 .my-button {
     background-color: #0071e3;
     color: white;
 }
-
 .my-button1 {
     border: 1px solid #0071e3;
     color: #0071e3;
 }
-
 .my-button:hover { background-color: #0077ed; }
 .my-button1:hover { background-color: #0071e3; color: white; }
-
-.unit-image-wrapper { 
-    /* Хэрэггүй */
-}
-/* ======================================= */
-/* III. Текст ба Товчлуурын Style (Нэгтгэсэн) */
-/* ======================================= */
-
-/* ... (өмнөх Background Зураг болон unit-wrapper дүрмүүд хэвээр үлдэнэ) ... */
-
-/* 🟢 ҮНДСЭН ФОНТЫН ДҮРЭМ: БҮХ HEADLINE-д хамаарна (56px) 🟢 */
 .headline {
     font-size: 56px; 
     font-weight: 600;
     margin: 0;
     color: #1d1d1f;
 }
-
-/* 🟢 ҮНДСЭН ФОНТЫН ДҮРЭМ: БҮХ SUBHEAD-д хамаарна (26px) 🟢 */
 .subhead {
     font-size: 26px;
     margin: 5px 0 10px 0; 
     color: #1d1d1f;
 }
-
-/* 🟢 AirPods Hero-ийн тусгай засвар: H3-ийн нөлөөг арилгаж, 56px-ийг баталгаажуулах 🟢 */
 .airpods-pro3-hero .unit-wrapper .headline {
-    /* Энэ нь "section.airpods-pro3-hero" доторх "div.unit-wrapper" доторх "h3.headline" гэсэн 
-       илүү тодорхой замыг зааж өгснөөр, бусад дүрмийг давж ажиллах магадлал өндөр. */
     font-size: 56px; 
 }
-
-/* ... (бусад дүрмүүд хэвээр үлдэнэ) ... */
 .slider {
     width: 100%;
     overflow: hidden;
     position: relative;
     margin-bottom: 40px;
 }
-
 .row {
     display: flex;
     gap: 20px;
     transform: translateX(0);
     transition: transform 1.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
-
 .column img {
     width: 600px;
     height: 350px;
@@ -217,16 +154,11 @@ body {
     border-radius: 20px;
     display: block;
 }
-
-
-
-/* Dots (Spotify style) */
 .indicators {
     display: flex;
     gap: 12px;
     justify-content: center;
 }
-
 .indicator {
     width: 10px;
     height: 10px;
@@ -235,7 +167,6 @@ body {
     opacity: 0.5;
     transition: 0.3s;
 }
-
 .indicator.active {
     width: 40px;
     height: 10px;
@@ -263,14 +194,12 @@ body {
     height: 220px;
     border-radius: 16px;
     object-fit: contain;
-    background: #000; /* Apple style black background */
+    background: #000; 
 }
 .sumya {
     background: #f5f5f7;
     padding: 60px 0;
 }
-
-/* Гарчигийг голлуулах */
 .sumya .text {
     text-align: center;
     margin-bottom: 30px;
@@ -377,7 +306,7 @@ body {
 
 .video-slider-container {
     position: relative;
-    width: 70%; /* Жаахан багасгасан */
+    width: 70%; 
     margin: auto;
     overflow: hidden;
     border-radius: 20px;
@@ -388,23 +317,213 @@ body {
     height: auto;
     position: absolute;
     top: 0;
-    left: 100%;        /* Анх бүгд баруун талд байрлана */
+    left: 100%;    
     opacity: 0;
-    transition: all 0.6s ease; /* Slide + fade */
+    transition: all 0.6s ease; 
 }
 
 .apple-video.active {
-    left: 0;           /* Идэвхтэй видео төв рүү гулсаж орно */
+    left: 0;           
     opacity: 1;
 }
 
-/* style.css файлдаа нэмнэ үү */
 
 .custom-headline {
-    /* Бусад headline-тай ижил хэмжээг өгөх */
+
     font-size: 56px; 
     font-weight: 600;
     margin: 0;
     color: #1d1d1f;
+}
+.internal-nav {
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 20px; 
+    margin-bottom: 30px;
+    border-radius: 8px; 
+}
+
+.internal-nav h2 {
+    color: #ffffff; 
+    text-align: center;
+    margin-bottom: 15px;
+}
+.internal-nav .nav-links {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+.internal-nav .nav-button {
+    background-color: #333333; 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.internal-nav .nav-button:hover {
+    background-color: #555555; 
+}
+.social-share {
+    background-color: #000000; 
+    color: #ffffff; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px; 
+}
+.social-share .share-title {
+    color: #ffffff; 
+    margin-bottom: 15px;
+}
+.social-share .share-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+.social-share .share-icons img {
+    width: 30px; 
+    height: 30px;
+    vertical-align: middle;
+    
+    transition: opacity 0.3s ease;
+}
+.social-share .share-icons a:hover img {
+    opacity: 0.8;
+}
+
+.social-share {
+    
+    text-align: center; 
+    padding: 20px;
+    margin: 20px 0;
+    
+    
+    background-color: #f5f5f7; 
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0; 
+    
+}
+.share-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #1d1d1f; 
+    margin-bottom: 15px;
+    letter-spacing: -0.01em; 
+}
+
+.share-icons {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 15px; 
+}
+
+
+.share-icons img {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle; 
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+
+.share-icons a:hover img {
+    opacity: 0.7; 
+    transform: scale(1.05); 
+}
+
+.share-icons a:focus {
+    outline: 2px solid #007aff; 
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.simple-bar-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #ffffff; 
+    min-height: 44px; 
+    border-bottom: 1px solid #d2d2d7; 
+    position: sticky;
+    top: 0;
+    z-index: 999; 
+}
+
+.bar-item {
+    color: #1d1d1f; 
+    text-decoration: none; 
+    font-size: 12px; 
+    line-height: 44px; 
+    padding: 0 15px; 
+    opacity: 0.8; 
+    transition: opacity 0.3s ease;
+    display: block; 
+    white-space: nowrap; 
+}
+
+.bar-links-wrapper {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1; 
+    margin: 0 20px; 
+}
+
+.logo-link {
+    font-size: 16px; 
+    font-weight: bold;
+    opacity: 1; 
+    padding: 0 20px; 
+}
+
+.bar-utility-icons {
+    display: flex;
+    gap: 18px; 
+}
+
+.search-icon, .bag-icon {
+    font-size: 16px; 
+    padding: 0 8px; 
+}
+
+.bar-item:hover {
+    opacity: 1; 
+}
+
+.bar-item {
+   
+    padding-left: 15px;
+    padding-right: 15px; 
+    color: #1d1d1f; 
+    text-decoration: none; 
+    font-size: 12px; 
+    line-height: 44px; 
+    opacity: 0.8; 
+    transition: opacity 0.3s ease;
+    display: block; 
+    white-space: nowrap; 
+}
+
+.logo-link {
+    line-height: normal; 
+    display: flex; 
+    align-items: center; 
+    height: 44px; 
+    opacity: 1; 
+    margin: 0; 
+}
+
+
+.apple-logo-img {
+    height: 18px; 
+    width: auto;
+    display: block;
+}
+
+.bar-links-wrapper {
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1; 
+    margin: 0; 
 }
 
