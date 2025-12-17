@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>hustle-custle</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="canonical" href="https:///" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <main class="main"  role="main">
+        
+       <section class="home">
+        
+    <div class="carousel-bg">
+        <div class="slider-track">
+            <div class="slide"><img src="img1.jpg" alt="1"></div>
+            <div class="slide"><img src="img2.jpg" alt="2"></div>
+            <div class="slide"><img src="img3.jpg" alt="3"></div>
+            <div class="slide"><img src="img4.jpg" alt="4"></div>
+            <div class="slide"><img src="img5.jpg" alt="5"></div>
+            <div class="slide"><img src="img6.jpg" alt="6"></div>
+        </div>
+    </div>
+
+    <div class="home-content">
+        <div class="headline">
+            <h1 class="headline1">Hustle Custle</h1>
+        </div>
+        <div class="tovchluuruud">
+            <a href="homepage.html" class="button-link">Home</a>
+            <a href="about.html" class="button-link">About</a>
+            <a href="shop.html" class="button-link">Shop</a>
+            <a href="login.html" class="button-link">Login</a>
+        </div>
+    </div>
+</section>
+       
+        
+        <section class="home3">
+            <div class="text">
+                <h2>Build Your Castle</h2>
+                <p>Hustle Castle-д өөрийн шилтгээнээ барьж, оршин суугчдаа сургаж, дайснаа дараарай. Та бол хаант улсын хамгийн хүчирхэг хаан байх болно.</p>
+                <a href="shop.html" class="button-link">Start Building</a>
+            </div>
+
+            <div class="image">
+                <img src="castle.jpg" alt="Castle Image">
+            </div>
+        </section>
+        <section class="home3">
+            <div class="image">
+                <img src="baatar.png" alt="Game Characters">
+            </div>
+            <div class="text">
+                <h2>Train Your Heroes</h2>
+                <p>Оршин суугчдаа шилдэг дайчид, мэргэн харваачид эсвэл хүчирхэг шидтэнүүд болгон сургаарай. Дүр бүр өөрийн гэсэн өвөрмөц ур чадвартай.</p>
+                <a href="account.html" class="button-link">View Heroes</a>
+            </div>
+        </section>
+
+        <hr class="separator">
+
+        <section class="home3">
+            <div class="text">
+                <h2>Epic PvP Battles</h2>
+                <p>Дэлхийн өнцөг булан бүрээс ирсэн тоглогчидтой тулалдаж, кланыхаа нэрийг дуурсга. Бусдын шилтгээнийг эзэлж, их хэмжээний олз хүртээрэй!</p>
+                <a href="war.png" class="button-link">Join the War</a>
+            </div>
+            <div class="image">
+                <img src="war.png" alt="Battle Mode">
+            </div>
+        </section>
+    </main>
+<script>
+    const track = document.querySelector('.slider-track');
+    const slides = Array.from(track.children);
+    let index = 0;
+    let isMoving = false; 
+
+    function updateCarousel() {
+        if (!slides.length) return;
+
+        slides.forEach((s, i) => {
+            s.classList.toggle('active', i === index);
+        });
+
+        const slideWidth = slides[0].offsetWidth;
+        const gap = 30;
+      
+        const offset = (window.innerWidth / 2) - (slideWidth / 2);
+        const moveAmount = - (index * (slideWidth + gap)) + offset;
+
+        track.style.transform = `translateX(${moveAmount}px)`;
+        
+        isMoving = false;
+    }
+
+    function nextSlide() {
+        if (isMoving) return; 
+        isMoving = true;
+        
+        index = (index + 1) % slides.length;
+        updateCarousel();
+    }
+
+    function startSlider() {
+        updateCarousel();
+        
+        setInterval(nextSlide, 3000);
+    }
+
+    window.addEventListener('load', startSlider);
+
+    window.addEventListener('resize', () => {
+        track.style.transition = 'none';
+        updateCarousel();
+        setTimeout(() => {
+            track.style.transition = 'transform 0.8s cubic-bezier(0.45, 0, 0.55, 1)';
+        }, 50);
+    });
+</script>
+    </body>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h4>Company</h4>
+            <div class="underline"></div>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">MGVC</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Get Help</h4>
+            <div class="underline"></div>
+            <ul>
+                <li><a href="#">Download-Game</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Online Shop</h4>
+            <div class="underline"></div>
+            <ul>
+                <li><a href="#">Market | MY.GAMES</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Site</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="underline"></div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i>f</a>
+                <a href="#"><i class="fab fa-twitter"></i>t</a>
+                <a href="#"><i class="fab fa-instagram"></i>i</a>
+                <a href="#"><i class="fab fa-linkedin-in"></i>in</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
